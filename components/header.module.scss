@@ -1,0 +1,24 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 32px;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  .navItem {
+    padding: 10px;
+    margin: 0 10px;
+    font-size: 20px;
+  }
+  .selected {
+    font-weight: 600;
+  }
+}
