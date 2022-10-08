@@ -12,7 +12,7 @@ const AboutMe = () => {
         <p className={styles.name}>About Me | Tien Thinh</p>
         <p className={styles.introduction}>
           Just a simple guy with love of sharing about what I learned and what I
-          knew. I'm talking about web development, programming, and technology
+          know. I'm talking about web development, programming, and technology
           in general.
         </p>
       </div>

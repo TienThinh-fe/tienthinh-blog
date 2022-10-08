@@ -5,7 +5,7 @@ import styles from "./post-preview.module.scss";
 
 const PostPreview = ({ imageUrl, title, description }) => {
   return (
-    <Link href="/">
+    <Link href="/blogs/first-post">
       <div className={styles.wrapper}>
         <div className={styles.thumbnail}>
           <img src={imageUrl} alt={title} />

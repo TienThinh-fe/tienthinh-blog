@@ -10,7 +10,7 @@ const Header = () => {
   const router = useRouter();
 
   useEffect(() => {
-    if (router.pathname !== "/") {
+    if (router.pathname === "/about") {
       setIsHome(false);
     } else {
       setIsHome(true);

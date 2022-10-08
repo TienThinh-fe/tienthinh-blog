@@ -1,4 +1,5 @@
 import Head from "next/head";
+import "highlight.js/styles/night-owl.css";
 
 import "../styles/reset.css";
 import "../styles/globals.css";
