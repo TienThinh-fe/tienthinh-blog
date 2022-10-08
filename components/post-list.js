@@ -6,9 +6,9 @@ import PostPreview from "./post-preview";
 const PostList = ({ posts }) => {
   return (
     <div className={`${styles.wrapper}`}>
-      {posts.map((post) => (
+      {posts.map((post, index) => (
         <PostPreview
-          key={post.title}
+          key={index}
           imageUrl={post.imageUrl}
           title={post.title}
           description={post.description}
