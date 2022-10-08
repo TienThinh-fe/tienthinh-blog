@@ -11,9 +11,9 @@ const AboutMe = () => {
       <div className={styles.description}>
         <p className={styles.name}>About Me | Tien Thinh</p>
         <p className={styles.introduction}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco
+          Just a simple guy with love of sharing about what I learned and what I
+          knew. I'm talking about web development, programming, and technology
+          in general.
         </p>
       </div>
     </div>
