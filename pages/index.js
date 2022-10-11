@@ -55,8 +55,6 @@ export default function Home({ postsProp }) {
     },
   ];
 
-  console.log(postsProp);
-
   return (
     <Container>
       <Header />

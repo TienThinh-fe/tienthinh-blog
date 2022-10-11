@@ -31,9 +31,6 @@ const components = {
 };
 
 const PostContent = ({ mdxSource, frontmatter }) => {
-  console.log("frontmatter at post: ", frontmatter);
-  console.log("mdxSource at post: ", mdxSource);
-
   return (
     <div className={styles.wrapper}>
       <MDXRemote {...mdxSource} components={components} />
