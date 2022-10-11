@@ -3,7 +3,12 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ["next-blog-wordpress.vercel.app", "images.unsplash.com"],
+    domains: [
+      "next-blog-wordpress.vercel.app",
+      "images.unsplash.com",
+      "encrypted-tbn0.gstatic.com",
+      "pbs.twimg.com",
+    ],
   },
 };
 
