@@ -7,7 +7,7 @@ const TagList = ({ tags }) => {
   return (
     <div className={`${styles.wrapper}`}>
       {tags.map((tag) => (
-        <Tag key={tag.title} title={tag.title} isSelected={tag.isSelected} />
+        <Tag key={tag} title={tag} />
       ))}
     </div>
   );

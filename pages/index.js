@@ -2,6 +2,7 @@
 import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
+import { useEffect } from "react";
 
 // import components
 import Container from "../components/container";
@@ -11,33 +12,23 @@ import TagList from "../components/tag-list";
 
 // import utils
 import { postFileNames, postsPath } from "../utils/mdx-utils";
+import { getAllTags } from "../utils/helper";
 
-export default function Home({ postsProp }) {
-  const tags = [
-    {
-      title: "All",
-      isSelected: true,
-    },
+// import store
+import { useTagStore, usePostStore } from "../store/store";
 
-    {
-      title: "TIL",
-      isSelected: false,
-    },
-    {
-      title: "Frontend",
-      isSelected: false,
-    },
-    {
-      title: "Backend",
-      isSelected: false,
-    },
-  ];
+export default function Home({ posts }) {
+  useEffect(() => {
+    usePostStore.setState({ posts: posts });
+    usePostStore.setState({ initialPosts: posts });
+    useTagStore.setState({ tags: getAllTags(posts) });
+  }, []);
 
   return (
     <Container>
       <Header />
-      <TagList tags={tags} />
-      <PostList posts={postsProp} />
+      <TagList tags={useTagStore((state) => state.tags)} />
+      <PostList posts={usePostStore((state) => state.posts)} />
     </Container>
   );
 }
@@ -52,6 +43,6 @@ export async function getStaticProps() {
     };
   });
   return {
-    props: { postsProp: JSON.parse(JSON.stringify(posts)) },
+    props: { posts: JSON.parse(JSON.stringify(posts)) },
   };
 }
