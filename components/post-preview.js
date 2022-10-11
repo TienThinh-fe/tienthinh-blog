@@ -3,9 +3,9 @@ import Link from "next/link";
 
 import styles from "./post-preview.module.scss";
 
-const PostPreview = ({ imageUrl, title, description }) => {
+const PostPreview = ({ imageUrl, title, description, slug }) => {
   return (
-    <Link href="/blogs/first-post">
+    <Link href={`/blogs/${slug}`}>
       <div className={styles.wrapper}>
         <div className={styles.thumbnail}>
           <img src={imageUrl} alt={title} />
