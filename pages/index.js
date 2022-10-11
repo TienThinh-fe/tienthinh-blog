@@ -33,33 +33,11 @@ export default function Home({ postsProp }) {
     },
   ];
 
-  const posts = [
-    {
-      imageUrl:
-        "https://www.educative.io/v2api/editorpage/6452289848475648/image/5294398307303424",
-      title: "Lorem ipsum dolor sit amet",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...",
-    },
-    {
-      imageUrl:
-        "https://www.educative.io/v2api/editorpage/6452289848475648/image/5294398307303424",
-      title: "Lorem ipsum dolor sit amet",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...",
-    },
-    {
-      imageUrl: postsProp[0].frontmatter.bannerUrl,
-      title: postsProp[0].frontmatter.title,
-      description: postsProp[0].frontmatter.description,
-    },
-  ];
-
   return (
     <Container>
       <Header />
       <TagList tags={tags} />
-      <PostList posts={posts} />
+      <PostList posts={postsProp} />
     </Container>
   );
 }

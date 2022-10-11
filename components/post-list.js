@@ -9,9 +9,9 @@ const PostList = ({ posts }) => {
       {posts.map((post, index) => (
         <PostPreview
           key={index}
-          imageUrl={post.imageUrl}
-          title={post.title}
-          description={post.description}
+          imageUrl={post.frontmatter.bannerUrl}
+          title={post.frontmatter.title}
+          description={post.frontmatter.description}
         />
       ))}
     </div>
