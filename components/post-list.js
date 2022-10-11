@@ -12,6 +12,7 @@ const PostList = ({ posts }) => {
           imageUrl={post.frontmatter.bannerUrl}
           title={post.frontmatter.title}
           description={post.frontmatter.description}
+          slug={post.slug}
         />
       ))}
     </div>
